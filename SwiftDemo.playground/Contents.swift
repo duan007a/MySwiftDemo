@@ -417,14 +417,126 @@ func anyCommonElements<T: Sequence,U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
 
 anyCommonElements([1,2,3], [3])
 
+
+/***********************    Constants and Variables     ***********************/
+
+let maximumNumberOfLoginAttempts = 10
+var currentLoginAttempt = 0
+
+var x = 0.0, y = 0.0, z = 0.0
+
+var welcomeMessage: String
+welcomeMessage = "Hello"
+
+var red, green, blue: Double
+
+/**************     Naming Constants and Variables      **************/
+
+let π = 3.14159
+let 你好 = "你好世界"
+let 🐶🐮 = "dogcow"
+let 你1 = "nihao"
+
+var friendlyWelcome = "Hello!"
+friendlyWelcome = "Bonjour!"
+
+print(friendlyWelcome,terminator:"")
+
+let minValue = Int32.min
+let maxValue = Int32.max
+
+let decimalInteger = 17
+let binaryInteger = 0b10001
+let octalInteger = 0o21
+let hexadecimalInteger = 0x11
+
+//let cannotBeNegative: UInt8 = -1
+//let tooBig: Int8 = Int8.max + 1
+
+let twoThousand: UInt16 = 2_000
+let one: UInt8 = 1
+let twoThousandAndOne = twoThousand + UInt16(one)
+
+let three = 3
+let fractionalPart = 0.14159
+let pi = Double(three) + fractionalPart
+
+let integerPi = Int(pi)
+
+let newpi = 3 + 0.14159
+
+typealias audioSample = UInt16
+let maxAmplitudeFound = audioSample.max;
+
+let i = 1
+if i == 1 {
+    
+}
+
+let httpError = (404, "Not Found")
+let (statusCode, statusMessage) = httpError
+print("The status code is \(statusCode)")
+print("The status message is \(statusMessage)")
+
+print("The status code is \(httpError.0)")
+print("The status message is \(httpError.1)")
+
+let http200Status = (statusCode: 200, description: "OK")
+print("The status code is \(http200Status.statusCode)")
+// Prints "The status code is 200"
+print("The status message is \(http200Status.description)")
+// Prints "The status message is OK"
+
+let possibleNumber = "123"
+let convertedNumber: Int? = Int(possibleNumber)
+
+if convertedNumber != nil {
+    print("convertedNumber has an integer value of \(convertedNumber!).")
+}
+
+if let hhnihao = convertedNumber {
+    print("hhnihao\(hhnihao)")
+}
+
+var serverResponseCode: Int? = 404
+serverResponseCode = nil
+
+class Sample{
+    func simpleDescription() -> String {
+        return "Sample"
+    }
+}
+
+var sample: Sample? = Sample()
+//sample = nil
+//print(sample?.simpleDescription())
+
+if sample != nil {
+    print("sample is not nil")
+}
+
+var surveyAnswer: String?
+
+if let actualNumber = Int(possibleNumber) {
+    print("\"\(possibleNumber)\" has an integer value of \(actualNumber)")
+} else {
+    print("\"\(possibleNumber)\" could not be converted to an integer")
+}
+
+if let firstNumber = Int("4"),let secondNumber = Int("40"),firstNumber < secondNumber && secondNumber < 100 {
+    print("\(firstNumber) < \(secondNumber) < 100")
+}
 */
+let age = -3
+//assert(age >= 0, "A person's age can't be less than zero.")
 
-
-
-
-
-
-
+if age > 10 {
+    print("You can ride the roller-coaster or the ferris wheel.")
+} else if age > 0 {
+    print("You can ride the ferris wheel.")
+} else {
+    assertionFailure("A person's age can't be less than zero.")
+}
 
 
 
